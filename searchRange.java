@@ -9,13 +9,11 @@ class Solution
         {
             if(nums[i] == target)
             {
-                if(startFound)
-                    positions[1] = i;
+                positions[1] = i;
                 
-                else
+                if(!startFound)
                 {
                     positions[0] = i;
-                    positions[1] = i;
                     startFound = true;
                 }
             }
