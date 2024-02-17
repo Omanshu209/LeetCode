@@ -3,7 +3,6 @@ class Solution
     public int[] searchRange(int[] nums, int target)
     {
         int[] positions = {-1, -1};
-        boolean startFound = false;
 
         for(int i = 0 ; i < nums.length ; i++)
         {
@@ -11,11 +10,8 @@ class Solution
             {
                 positions[1] = i;
                 
-                if(!startFound)
-                {
+                if(positions[0] == -1)
                     positions[0] = i;
-                    startFound = true;
-                }
             }
         }
 
