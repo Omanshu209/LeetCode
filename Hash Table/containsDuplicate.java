@@ -24,7 +24,7 @@ class Solution
     }
 }
 
-// Solution 2 (Using HashSet) - uses less memory
+// Solution 2 (Using HashSet) - uses lesser memory
 
 import java.util.HashSet;
 
