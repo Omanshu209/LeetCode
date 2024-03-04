@@ -6,11 +6,9 @@ class Solution:
             if char not in chars:
                 chars[char] = 1
                 continue
-            chars[char] += 1;
+            chars[char] += 1
         
         for char in t:
-            if char not in chars:
-                return char
-            elif chars[char] == 0:
+            if char not in chars or chars[char] == 0:
                 return char
             chars[char] -= 1
