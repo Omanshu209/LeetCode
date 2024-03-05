@@ -7,6 +7,8 @@
  * }
  */
 
+// Solution 1
+
 class Solution
 {
     public void deleteNode(ListNode node)
@@ -19,5 +21,16 @@ class Solution
 
         node.val = node.next.val;
         node.next = null;
+    }
+}
+
+// Solution 2
+
+class Solution
+{
+    public void deleteNode(ListNode node)
+    {
+        node.val = node.next.val;
+        node.next = node.next.next;
     }
 }
