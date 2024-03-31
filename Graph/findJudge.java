@@ -1,3 +1,5 @@
+// Solution 1
+
 class Solution
 {
     public int findJudge(int n, int[][] trust)
@@ -28,6 +30,29 @@ class Solution
                 return i + 1;
         }
 
+        return -1;
+    }
+}
+
+// Solution 2
+
+class Solution
+{
+    public int findJudge(int n, int[][] trust)
+    {
+        int[] trustCount = new int[n];
+        int[] trustableCount = new int[n];
+
+        for(int[] t : trust)
+        {
+            trustableCount[t[0] - 1]++;
+            trustCount[t[1] - 1]++;
+        }
+
+        for(int i = 0 ; i < n ; i++)
+            if(trustableCount[i] == 0 && trustCount[i] + 1 == n)
+                return i + 1;
+        
         return -1;
     }
 }
